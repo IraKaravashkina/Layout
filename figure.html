@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1/0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Figure</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        .cube {
+            position: relative;
+        }
+
+        .side {
+            height: 95px;
+            position: absolute;
+            width: 95px;
+        }
+
+        .top {
+            background: linear-gradient(to top right, #9acc53, rebeccapurple);
+            transform: rotate(-45deg) skew(15deg, 15deg);
+        }
+
+        .left {
+            background: linear-gradient(to top right, #8ec63f, royalblue);
+            transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+        }
+
+        .right {
+            background: linear-gradient(to top right, #80b239, gold);
+            transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+        }
+    </style>
+</head>
+<body>
+<div class="cube">
+    <figure class="side top">1</figure>
+    <figure class="side left">2</figure>
+    <figure class="side right">3</figure>
+</div>
+</body>
+</html>

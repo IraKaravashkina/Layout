@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1/0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smily</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        .creature {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(to top, gold, red);
+            position: relative;
+        }
+
+        .creature::before, .creature::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 40px;
+            border-radius: 50%;
+            background: green;
+            top: 40px;
+            animation: eye 10s ease-in-out infinite;
+        }
+
+        .lips {
+            position absolute;
+            margin-top: -160px;
+            margin-left: 40px;
+            transform: translateX(25%);
+            width: 60px;
+            height: 90px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid #442200;
+            border-radius: 0;
+            transition: .5s;
+        }
+
+        .lips:hover {
+            width: 100px;
+            border-radius: 50%;
+            margin-left: 13px;
+        }
+
+        .creature::before {
+            left: 55px
+        }
+
+        .creature::after {
+            right: 55px
+        }
+
+        @keyframes eye {
+            10% {
+                transform: scaleY(1.0);
+            }
+            50% {
+                transform: scaleY(0.1);
+            }
+            50% {
+                transform: scaleY(2);
+            }
+            60% {
+                transform: scaleY(3);
+            }
+            80% {
+                transform: scaleY(0.1);
+            }
+    </style>
+</head>
+<body>
+<div class="creature"></div>
+<div class="lips"></div>
+</body>
+</html>
